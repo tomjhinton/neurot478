@@ -6,7 +6,7 @@
   "scripts": {
     "seed": "node seeds",
     "build": "webpack -p",
-    "serve": "webpack-dev-server",
+    "serve": "webpack serve",
     "serve:flask": "pipenv run flask run -p 4000",
     "postinstall": "[ \"$NODE_ENV\" = \"production\" ] && yarn build || exit 0"
   },
@@ -15,6 +15,9 @@
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
