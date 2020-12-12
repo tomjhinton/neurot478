@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:tomjhinton/neurot478.git",
   "author": "Tom Hinton <tomjhinton@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.123.0"
+  }
 }
