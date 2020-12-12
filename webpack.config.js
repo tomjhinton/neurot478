@@ -1,6 +1,6 @@
 var path = require('path')
 const webpack = require('webpack')
-
+const isProd = (process.env.NODE_ENV === 'production')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-
+  devtool: isProd ? false : 'source-map',
   devServer: {
     contentBase: path.resolve('src'),
     hot: true,
