@@ -3,9 +3,28 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:tomjhinton/neurot478.git",
+  "scripts": {
+    "seed": "node seeds",
+    "build": "webpack -p",
+    "serve": "webpack-dev-server",
+    "serve:flask": "pipenv run flask run -p 4000",
+    "postinstall": "[ \"$NODE_ENV\" = \"production\" ] && yarn build || exit 0"
+  },
   "author": "Tom Hinton <tomjhinton@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "three": "^0.123.0"
+    "@babel/core": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "three": "^0.123.0",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }
