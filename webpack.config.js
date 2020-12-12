@@ -26,10 +26,10 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [{loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'fonts/'
-        }}]
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          }}]
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -41,6 +41,7 @@ module.exports = {
       }
     ]
   },
+  target: 'web',
   devServer: {
     contentBase: path.resolve('src'),
     hot: true,
