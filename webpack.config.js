@@ -61,11 +61,17 @@ module.exports = {
       favicon: 'src/assets/favicon.png'
 
     }),
+    new webpack.ProvidePlugin({
+      THREE: 'three'
+    }),
     new webpack.ProvidePlugin({ 'window.decomp': 'poly-decomp' }),
     new CopyWebpackPlugin( {
       patterns: [
         { from: 'src/assets', to: 'assets' }
       ]}
-    )
+    ),
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer']
+    })
   ]
 }
